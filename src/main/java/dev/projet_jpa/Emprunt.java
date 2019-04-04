@@ -1,9 +1,18 @@
 package dev.projet_jpa;
 
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -12,14 +21,14 @@ import javax.persistence.Table;
 public class Emprunt {
 	
 	@Id // obligatoire
-	@Column(name="ID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Column(name="DATE_DEBUT")
-	private String titre;
+	private LocalDateTime dateDebut;
 	
 	@Column(name="DATE_FIN")
-	private String auteur;
+	private LocalDateTime dateFin;
 
 	@Column(name="DELAI")
 	private Integer delai;
@@ -27,6 +36,15 @@ public class Emprunt {
 	@ManyToOne
 	@JoinColumn(name="ID_CLIENT")
 	private Client client;
+	
+	@ManyToMany(mappedBy="emprunt")
+	private List<Livre> livre = new ArrayList<>();
+	
+	@Override
+	public String toString () {
+		String empruntAfficher = "1 livre emprunté le : " + dateDebut + ", nombre de jours possibles : " + delai;
+	    return empruntAfficher;
+	}
 
 	public Integer getId() {
 		return id;
@@ -36,20 +54,20 @@ public class Emprunt {
 		this.id = id;
 	}
 
-	public String getTitre() {
-		return titre;
+	public LocalDateTime getDateDebut() {
+		return dateDebut;
 	}
 
-	public void setTitre(String titre) {
-		this.titre = titre;
+	public void setDateDebut(LocalDateTime dateDebut) {
+		this.dateDebut = dateDebut;
 	}
 
-	public String getAuteur() {
-		return auteur;
+	public LocalDateTime getDateFin() {
+		return dateFin;
 	}
 
-	public void setAuteur(String auteur) {
-		this.auteur = auteur;
+	public void setDateFin(LocalDateTime dateFin) {
+		this.dateFin = dateFin;
 	}
 
 	public Integer getDelai() {
@@ -64,8 +82,18 @@ public class Emprunt {
 		return client;
 	}
 
-	public void setClient(Client idClient) {
-		this.client = idClient;
+	public void setClient(Client client) {
+		this.client = client;
 	}
+
+	public List<Livre> getLivre() {
+		return livre;
+	}
+
+	public void setLivre(List<Livre> livre) {
+		this.livre = livre;
+	}
+
+
 	
 }
