@@ -3,10 +3,12 @@ package dev.projet_jpa;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table (name="Emrpunt")
+@Table (name="Emprunt")
 public class Emprunt {
 	
 	@Id // obligatoire
@@ -22,8 +24,9 @@ public class Emprunt {
 	@Column(name="DELAI")
 	private Integer delai;
 	
-	@Column(name="ID_CLIENT")
-	private Integer idClient;
+	@ManyToOne
+	@JoinColumn(name="ID_CLIENT")
+	private Client client;
 
 	public Integer getId() {
 		return id;
@@ -57,12 +60,12 @@ public class Emprunt {
 		this.delai = delai;
 	}
 
-	public Integer getIdClient() {
-		return idClient;
+	public Client getClient() {
+		return client;
 	}
 
-	public void setIdClient(Integer idClient) {
-		this.idClient = idClient;
+	public void setClient(Client idClient) {
+		this.client = idClient;
 	}
 	
 }
