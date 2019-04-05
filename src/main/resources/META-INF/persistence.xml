@@ -2,13 +2,47 @@
 <persistence version="2.1"
 	xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="projet-jpa" transaction-type="RESOURCE_LOCAL">
+
+	<persistence-unit name="projet-jpa"
+		transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+		<!-- Choix de l'implémentation JPA (ici Hibernate) -->
+		<class>dev.banque.Adresse</class>
+		<class>dev.banque.Banque</class>
+		<class>dev.banque.Client</class>
+		<class>dev.banque.Compte</class>
+		<class>dev.banque.Operation</class>
+		<class>dev.banque.Virement</class>
+		<class>dev.banque.AssuranceVie</class>
+		<class>dev.banque.LivretA</class>
+
+		<properties>
+			<property name="javax.persistence.jdbc.url"
+				value="jdbc:mysql://uqwwrmtqkai0gpdb:nKAvRC35WyJVDRZSErV9@bvraquyzunygz9ss8lge-mysql.services.clever-cloud.com:3306/bvraquyzunygz9ss8lge?useSSL=false" />
+			<property name="javax.persistence.jdbc.user" value="uqwwrmtqkai0gpdb" />
+			<property name="javax.persistence.jdbc.password" value="nKAvRC35WyJVDRZSErV9" />
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+
+			<!-- desactiver l'autodetection des classes de type @Entity -->
+			<property name="hibernate.archive.autodetection" value="" />
+			<!-- Activation de la génération des tables manquantes uniquement -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+		</properties>
+	</persistence-unit>
+
+	<!-- Ancien fichier persistence unit, je ne sais pas comment on en gère 
+		2 en même temps -->
+	
+<persistence-unit name="projet-jpa-1" transaction-type="RESOURCE_LOCAL">
 
 		<!-- Choix de l'implémentation JPA (ici Hibernate) -->
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<class>dev.projet_jpa.Livre</class>
 		<class>dev.projet_jpa.Client</class>
 		<class>dev.projet_jpa.Emprunt</class>
+
 
 		<properties>
 			<property name="javax.persistence.jdbc.url"
@@ -18,4 +52,6 @@
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 		</properties>
 	</persistence-unit>
+
+
 </persistence>
