@@ -1,0 +1,46 @@
+﻿12:13:43.509 [main] INFO  o.h.jpa.internal.util.LogHelper -
+				HHH000204: Processing PersistenceUnitInfo [name: projet-jpa]
+12:13:43.593 [main] INFO  org.hibernate.Version -
+				HHH000412: Hibernate Core {5.4.2.Final}
+12:13:43.726 [main] INFO  o.h.annotations.common.Version -
+				HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+12:13:43.894 [main] WARN  o.hibernate.orm.connections.pooling -
+				HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+12:13:43.910 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://uqwwrmtqkai0gpdb:nKAvRC35WyJVDRZSErV9@bvraquyzunygz9ss8lge-mysql.services.clever-cloud.com:3306/bvraquyzunygz9ss8lge?useSSL=false]
+12:13:43.910 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001001: Connection properties: {user=uqwwrmtqkai0gpdb, password=****}
+12:13:43.910 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001003: Autocommit mode: false
+12:13:43.910 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl -
+				HHH000115: Hibernate connection pool size: 20 (min=1)
+12:13:44.162 [main] INFO  org.hibernate.dialect.Dialect -
+				HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+12:13:44.853 [main] INFO  org.hibernate.orm.connections.access -
+				HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@37fdfb05] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+12:13:52.422 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+				HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:13:52.642 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001008: Cleaning up connection pool [jdbc:mysql://uqwwrmtqkai0gpdb:nKAvRC35WyJVDRZSErV9@bvraquyzunygz9ss8lge-mysql.services.clever-cloud.com:3306/bvraquyzunygz9ss8lge?useSSL=false]
+12:15:30.081 [main] INFO  o.h.jpa.internal.util.LogHelper -
+				HHH000204: Processing PersistenceUnitInfo [name: projet-jpa]
+12:15:30.174 [main] INFO  org.hibernate.Version -
+				HHH000412: Hibernate Core {5.4.2.Final}
+12:15:30.293 [main] INFO  o.h.annotations.common.Version -
+				HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+12:15:30.477 [main] WARN  o.hibernate.orm.connections.pooling -
+				HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+12:15:30.477 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001005: using driver [com.mysql.cj.jdbc.Driver] at URL [jdbc:mysql://uqwwrmtqkai0gpdb:nKAvRC35WyJVDRZSErV9@bvraquyzunygz9ss8lge-mysql.services.clever-cloud.com:3306/bvraquyzunygz9ss8lge?useSSL=false]
+12:15:30.477 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001001: Connection properties: {user=uqwwrmtqkai0gpdb, password=****}
+12:15:30.477 [main] INFO  o.hibernate.orm.connections.pooling -
+				HHH10001003: Autocommit mode: false
+12:15:30.477 [main] INFO  o.h.e.j.c.i.DriverManagerConnectionProviderImpl -
+				HHH000115: Hibernate connection pool size: 20 (min=1)
+12:15:30.723 [main] INFO  org.hibernate.dialect.Dialect -
+				HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+12:15:31.409 [main] INFO  org.hibernate.orm.connections.access -
+				HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@37fdfb05] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+12:15:38.938 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator -
+				HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

@@ -1,0 +1,7 @@
+12:15:39.123 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1579)
+	at DAO.BanqueDAO.findAClient(BanqueDAO.java:188)
+	at BanqueService.AjouterCompte.executeUC(AjouterCompte.java:40)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:63)

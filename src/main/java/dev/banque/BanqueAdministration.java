@@ -2,6 +2,9 @@ package dev.banque;
 
 import java.util.Scanner;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import BanqueService.AjouterClient;
 import BanqueService.AjouterCompte;
 import BanqueService.FaireOperation;
@@ -9,8 +12,12 @@ import BanqueService.ListerClient;
 import DAO.BanqueDAO;
 
 public class BanqueAdministration {
+	private static final Logger LOGGER = LoggerFactory.getLogger(BanqueAdministration.class);
 
 	public static void main(String[] args) {
+
+		LOGGER.info("L'application vient de démarrer.");
+
 		BanqueDAO dao = new BanqueDAO();
 		Scanner question = new Scanner(System.in);
 
@@ -23,6 +30,7 @@ public class BanqueAdministration {
 		System.out.println("4. Effectuer une opération sur un compte existant");
 		System.out.println("99. Sortir");
 
+		try  {
 		boolean fin = false;
 		while (fin == false) {
 
@@ -31,7 +39,10 @@ public class BanqueAdministration {
 
 			String z = question.nextLine();
 			int numeroQuestion = Integer.parseInt(z);
-
+		
+			
+				
+			
 			if (numeroQuestion != 99) {
 				fin = false;
 				switch (numeroQuestion) {
@@ -72,7 +83,12 @@ public class BanqueAdministration {
 			}
 
 		}
-
-		question.close();
+		} catch (RuntimeException e) {
+			LOGGER.error("une errru   ...", e);
+			System.out.println("La connexion au serveur a échoué. Merci de recommencer plus tard.");
+		} finally {
+			question.close();
+		}
+		
 	}
 }
