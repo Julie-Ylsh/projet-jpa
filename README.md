@@ -1,8 +1,8 @@
-﻿#Projet JPA
+﻿# Projet JPA
 
 Création de tables livres, clients, commandes... Et exploitation des ces tables à travers la JPA
 
-##Menu de la banque
+## Menu de la banque
 ```
 
 ***** Bienvenue dans le logiciel de gestion des banques, des clients, et toute la finance de tout le mond entier *****
@@ -15,9 +15,9 @@ Création de tables livres, clients, commandes... Et exploitation des ces tables
 ```
 
 
-##Instructions possibles
+## Instructions possibles
 Les opérations suivantes ont été rendues possibles :
-###TP 3
+### TP 3
 Le TP 3 demandait les instructions suivantes :
 Créer les entités JPA suivantes et mettez en place les annotations relationnelles :
 o Banque
@@ -29,7 +29,7 @@ o Client
 - Les tables seront générées à partir des relations définies dans votre modèle métier
 - Insérer en base de données des instances des différents objets en utilisant l’EntityManager
 
-###TP 4
+### TP 4
 Le TP 4 demandait les instructions suivantes :
 Créer les entités JPA suivantes et mettez en place les annotations d’héritage :
 o LivretA
