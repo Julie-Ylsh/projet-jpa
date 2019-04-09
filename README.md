@@ -20,9 +20,13 @@ Les opérations suivantes ont été rendues possibles :
 ### TP 3
 Le TP 3 demandait les instructions suivantes :
 >Créer les entités JPA suivantes et mettez en place les annotations relationnelles :
+>
 >o Banque
+>
 >o Compte
+>
 >o Operation
+>
 >o Client
 	>▪ Adresse (Embeddable)
 
