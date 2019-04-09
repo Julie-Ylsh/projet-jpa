@@ -24,7 +24,7 @@ o Banque
 o Compte
 o Operation
 o Client
-▪ Adresse (Embeddable)
+	▪ Adresse (Embeddable)
 
 - Les tables seront générées à partir des relations définies dans votre modèle métier
 - Insérer en base de données des instances des différents objets en utilisant l’EntityManager
@@ -36,9 +36,9 @@ o LivretA
 o AssuranceVie
 o Virement
 - Insérer en base de données des instances des différents objets en utilisant l’EntityManager
-o insérer un compte associé à 2 clients
-o insérer un client avec plusieurs comptes :
-▪ 1 compte de type assurance vie
-▪ 1 compte de type livret A
-o insérer des opérations de type virements sur un compte
-o insérer des opérations de type opérations sur un compte
+- Insérer un compte associé à 2 clients
+- Insérer un client avec plusieurs comptes :
+	▪ 1 compte de type assurance vie
+	▪ 1 compte de type livret A
+- Insérer des opérations de type virements sur un compte
+- Insérer des opérations de type opérations sur un compte
