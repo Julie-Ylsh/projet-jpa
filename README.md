@@ -33,19 +33,23 @@ Le TP 3 demandait les instructions suivantes :
 >
 >
 >- Les tables seront générées à partir des relations définies dans votre modèle métier
->
 >- Insérer en base de données des instances des différents objets en utilisant l’EntityManager
 
 ### TP 4
 Le TP 4 demandait les instructions suivantes :
-Créer les entités JPA suivantes et mettez en place les annotations d’héritage :
-o LivretA
-o AssuranceVie
-o Virement
-- Insérer en base de données des instances des différents objets en utilisant l’EntityManager
-- Insérer un compte associé à 2 clients
-- Insérer un client avec plusieurs comptes :
-	▪ 1 compte de type assurance vie
-	▪ 1 compte de type livret A
-- Insérer des opérations de type virements sur un compte
-- Insérer des opérations de type opérations sur un compte
+>Créer les entités JPA suivantes et mettez en place les annotations d’héritage :
+>
+>o LivretA
+>
+>o AssuranceVie
+>
+>o Virement
+>
+>
+>- Insérer en base de données des instances des différents objets en utilisant l’EntityManager
+>- Insérer un compte associé à 2 clients
+>- Insérer un client avec plusieurs comptes :
+	>▪ 1 compte de type assurance vie
+	>▪ 1 compte de type livret A
+>- Insérer des opérations de type virements sur un compte
+>- Insérer des opérations de type opérations sur un compte
