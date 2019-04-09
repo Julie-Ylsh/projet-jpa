@@ -17,8 +17,8 @@ import javax.persistence.Table;
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-@Table(name = "COMPTE")
-public class Compte {
+@Table(name="COMPTE")
+public abstract class AbstractCompte {
 
 	@Id // obligatoire
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,12 +31,11 @@ public class Compte {
 	private Double solde;
 
 	@ManyToMany
-	@JoinTable(name = "CMPTE", joinColumns = @JoinColumn(name = "ID_COMPTE", referencedColumnName = "ID"), 
-	inverseJoinColumns = @JoinColumn(name = "ID_CLIENT", referencedColumnName = "ID"))
+	@JoinTable(name = "CMPTE", joinColumns = @JoinColumn(name = "ID_COMPTE", referencedColumnName = "ID"), inverseJoinColumns = @JoinColumn(name = "ID_CLIENT", referencedColumnName = "ID"))
 	private List<Client> clients;
 
 	@OneToMany(mappedBy = "compte")
-	private List<Operation> operations;
+	private List<Virement> virements;
 
 	public Integer getId() {
 		return id;
@@ -70,17 +69,17 @@ public class Compte {
 		this.clients = clients;
 	}
 
-	public List<Operation> getOperations() {
-		return operations;
+	public List<Virement> getVirements() {
+		return virements;
 	}
 
-	public void setOperations(List<Operation> operations) {
-		this.operations = operations;
+	public void setVirements(List<Virement> virements) {
+		this.virements = virements;
 	}
 
 	@Override
 	public String toString() {
-		return "Compte " + id + ", numero " + numero + ", solde : " + solde ;
+		return "Compte " + id + ", numero " + numero + ", solde : " + solde;
 	}
 
 }

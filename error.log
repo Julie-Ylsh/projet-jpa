@@ -5,3 +5,251 @@ javax.persistence.NoResultException: No entity found for query
 	at DAO.BanqueDAO.findAClient(BanqueDAO.java:188)
 	at BanqueService.AjouterCompte.executeUC(AjouterCompte.java:40)
 	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:63)
+12:42:34.967 [main] ERROR BanqueService.AjouterClient -
+				Text '03-10-1964' could not be parsed at index 2
+12:46:08.556 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: dev.banque.Client.comptes, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:602)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:217)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:161)
+	at org.hibernate.collection.internal.PersistentBag.size(PersistentBag.java:287)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:30)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:69)
+14:54:05.240 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: dev.banque.Client.comptes, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:602)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:217)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:161)
+	at org.hibernate.collection.internal.PersistentBag.size(PersistentBag.java:287)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:29)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:74)
+14:55:00.537 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: dev.banque.Client.comptes, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:602)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:217)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:161)
+	at org.hibernate.collection.internal.PersistentBag.size(PersistentBag.java:287)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:29)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+15:19:31.098 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.query.internal.AbstractProducedQuery.getSingleResult(AbstractProducedQuery.java:1579)
+	at DAO.BanqueDAO.findAClient(BanqueDAO.java:242)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:26)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+15:31:07.347 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: dev.banque.Client.comptes, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:602)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:217)
+	at org.hibernate.collection.internal.AbstractPersistentCollection.readSize(AbstractPersistentCollection.java:161)
+	at org.hibernate.collection.internal.PersistentBag.size(PersistentBag.java:287)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:41)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+16:11:10.094 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+java.lang.IllegalArgumentException: org.hibernate.hql.internal.ast.QuerySyntaxException: COMPTE is not mapped [select ct from COMPTE ct where (ID_CLIENT='1' )]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:745)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at DAO.BanqueDAO.findComptes(BanqueDAO.java:272)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:35)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: COMPTE is not mapped [select ct from COMPTE ct where (ID_CLIENT='1' )]
+	at org.hibernate.hql.internal.ast.QuerySyntaxException.generateQueryException(QuerySyntaxException.java:79)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:118)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:78)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:158)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720)
+	... 5 common frames omitted
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: COMPTE is not mapped
+	at org.hibernate.hql.internal.ast.util.SessionFactoryHelper.requireClassPersister(SessionFactoryHelper.java:169)
+	at org.hibernate.hql.internal.ast.tree.FromElementFactory.addFromElement(FromElementFactory.java:91)
+	at org.hibernate.hql.internal.ast.tree.FromClause.addFromElement(FromClause.java:79)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.createFromElement(HqlSqlWalker.java:331)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElement(HqlSqlBaseWalker.java:3695)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromElementList(HqlSqlBaseWalker.java:3584)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.fromClause(HqlSqlBaseWalker.java:720)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:576)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:313)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:261)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:272)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	... 11 common frames omitted
+16:13:11.894 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+javax.persistence.PersistenceException: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:154)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1538)
+	at org.hibernate.query.Query.getResultList(Query.java:165)
+	at DAO.BanqueDAO.findComptes(BanqueDAO.java:273)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:35)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+Caused by: org.hibernate.exception.SQLGrammarException: could not extract ResultSet
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:63)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:69)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:2173)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1936)
+	at org.hibernate.loader.Loader.executeQueryStatement(Loader.java:1898)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:937)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:340)
+	at org.hibernate.loader.Loader.doList(Loader.java:2695)
+	at org.hibernate.loader.Loader.doList(Loader.java:2678)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2512)
+	at org.hibernate.loader.Loader.list(Loader.java:2507)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:504)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:396)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.performList(HQLQueryPlan.java:224)
+	at org.hibernate.internal.SessionImpl.list(SessionImpl.java:1538)
+	at org.hibernate.query.internal.AbstractProducedQuery.doList(AbstractProducedQuery.java:1561)
+	at org.hibernate.query.internal.AbstractProducedQuery.list(AbstractProducedQuery.java:1529)
+	... 4 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'ID_CLIENT' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:95)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:960)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1019)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:60)
+	... 19 common frames omitted
+16:22:30.484 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+java.lang.IllegalArgumentException: Type specified for TypedQuery [dev.banque.AbstractCompte] is incompatible with query return type [interface java.util.Collection]
+	at org.hibernate.internal.AbstractSharedSessionContract.resultClassChecking(AbstractSharedSessionContract.java:792)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:746)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at DAO.BanqueDAO.findComptes(BanqueDAO.java:272)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:35)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+16:36:12.979 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+java.lang.IllegalArgumentException: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+ [select ct from dev.banque.AbstractCompte c where (ID_Client='1' )]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:745)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at DAO.BanqueDAO.saveNewVirement(BanqueDAO.java:299)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:81)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+ [select ct from dev.banque.AbstractCompte c where (ID_Client='1' )]
+	at org.hibernate.QueryException.generateQueryException(QueryException.java:120)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:118)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:78)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:158)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720)
+	... 5 common frames omitted
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+
+	at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.useSelectClause(HqlSqlWalker.java:1018)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.processQuery(HqlSqlWalker.java:786)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:677)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:313)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:261)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:272)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	... 11 common frames omitted
+16:40:54.540 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+java.lang.IllegalArgumentException: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+ [select ct from dev.banque.AbstractCompte c where (ID_Client='1' )]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:745)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at DAO.BanqueDAO.saveNewVirement(BanqueDAO.java:300)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:74)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+ [select ct from dev.banque.AbstractCompte c where (ID_Client='1' )]
+	at org.hibernate.QueryException.generateQueryException(QueryException.java:120)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:118)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:78)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:158)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720)
+	... 5 common frames omitted
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+
+	at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.useSelectClause(HqlSqlWalker.java:1018)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.processQuery(HqlSqlWalker.java:786)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:677)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:313)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:261)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:272)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	... 11 common frames omitted
+16:44:12.385 [main] ERROR dev.banque.BanqueAdministration -
+				une errru   ...
+java.lang.IllegalArgumentException: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+ [select ct from dev.banque.AbstractCompte c where (id='1' )]
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:138)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:181)
+	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:188)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:729)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:745)
+	at org.hibernate.internal.AbstractSessionImpl.createQuery(AbstractSessionImpl.java:23)
+	at DAO.BanqueDAO.saveNewVirement(BanqueDAO.java:300)
+	at BanqueService.FaireOperation.executeUC(FaireOperation.java:74)
+	at dev.banque.BanqueAdministration.main(BanqueAdministration.java:70)
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+ [select ct from dev.banque.AbstractCompte c where (id='1' )]
+	at org.hibernate.QueryException.generateQueryException(QueryException.java:120)
+	at org.hibernate.QueryException.wrapWithQueryString(QueryException.java:103)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:220)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.compile(QueryTranslatorImpl.java:144)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:118)
+	at org.hibernate.engine.query.spi.HQLQueryPlan.<init>(HQLQueryPlan.java:78)
+	at org.hibernate.engine.query.spi.QueryPlanCache.getHQLQueryPlan(QueryPlanCache.java:158)
+	at org.hibernate.internal.AbstractSharedSessionContract.getQueryPlan(AbstractSharedSessionContract.java:611)
+	at org.hibernate.internal.AbstractSharedSessionContract.createQuery(AbstractSharedSessionContract.java:720)
+	... 5 common frames omitted
+Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hql.internal.ast.tree.IdentNode 
+ \-[IDENT] IdentNode: 'ct' {originalText=ct}
+
+	at org.hibernate.hql.internal.ast.tree.SelectClause.initializeExplicitSelectClause(SelectClause.java:161)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.useSelectClause(HqlSqlWalker.java:1018)
+	at org.hibernate.hql.internal.ast.HqlSqlWalker.processQuery(HqlSqlWalker.java:786)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.query(HqlSqlBaseWalker.java:677)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.selectStatement(HqlSqlBaseWalker.java:313)
+	at org.hibernate.hql.internal.antlr.HqlSqlBaseWalker.statement(HqlSqlBaseWalker.java:261)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.analyze(QueryTranslatorImpl.java:272)
+	at org.hibernate.hql.internal.ast.QueryTranslatorImpl.doCompile(QueryTranslatorImpl.java:192)
+	... 11 common frames omitted

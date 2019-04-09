@@ -12,6 +12,8 @@ public class ListerClient extends BanqueService {
 		
 		// La fonction pour afficher
 		List<Client> clients = dao.findAllClients();
+		
+		
 	}
 
 }

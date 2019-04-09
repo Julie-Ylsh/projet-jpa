@@ -24,18 +24,19 @@ public class BanqueAdministration {
 		// Afficher les options du menu
 		System.out.println(
 				"***** Bienvenue dans le logiciel de gestion des banques, des clients, et toute la finance de tout le mond entier *****");
-		System.out.println("1. Afficher la liste des clients");
-		System.out.println("2. Ajouter un nouveau client");
-		System.out.println("3. Ajouter un compte à des clients existants");
-		System.out.println("4. Effectuer une opération sur un compte existant");
-		System.out.println("99. Sortir");
+
 
 		try  {
 		boolean fin = false;
 		while (fin == false) {
 
 			// On demande quelle action l'utilisateur veut faire
-			System.out.println("Menu principal. Veuillez faire votre choix");
+			System.out.println("/n" + "Menu principal. Veuillez faire votre choix");
+			System.out.println("1. Afficher la liste des clients");
+			System.out.println("2. Ajouter un nouveau client");
+			System.out.println("3. Ajouter un compte à des clients existants");
+			System.out.println("4. Effectuer une opération sur un compte existant");
+			System.out.println("99. Sortir");
 
 			String z = question.nextLine();
 			int numeroQuestion = Integer.parseInt(z);

@@ -11,8 +11,8 @@
 		<class>dev.banque.Adresse</class>
 		<class>dev.banque.Banque</class>
 		<class>dev.banque.Client</class>
-		<class>dev.banque.Compte</class>
-		<class>dev.banque.Operation</class>
+		<class>dev.banque.AbstractCompte</class>
+		<class>dev.banque.AbstractOperation</class>
 		<class>dev.banque.Virement</class>
 		<class>dev.banque.AssuranceVie</class>
 		<class>dev.banque.LivretA</class>
@@ -23,6 +23,7 @@
 			<property name="javax.persistence.jdbc.user" value="uqwwrmtqkai0gpdb" />
 			<property name="javax.persistence.jdbc.password" value="nKAvRC35WyJVDRZSErV9" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+			
 
 			<!-- desactiver l'autodetection des classes de type @Entity -->
 			<property name="hibernate.archive.autodetection" value="" />

@@ -56,7 +56,7 @@ public class Client {
 	@ManyToMany
 	@JoinTable(name = "CLIENT_COMPTE", joinColumns = @JoinColumn(name = "ID_CLIENT", referencedColumnName = "ID"), 
 	inverseJoinColumns = @JoinColumn(name = "ID_COMPTE", referencedColumnName = "ID"))
-	private List<Compte> comptes;
+	private List<AbstractCompte> comptes;
 
 	public Integer getId() {
 		return id;
@@ -106,15 +106,15 @@ public class Client {
 		this.banque = banque;
 	}
 
-	public List<Compte> getComptes() {
+	public List<AbstractCompte> getComptes() {
 		return comptes;
 	}
 
-	public void setComptes(List<Compte> comptes) {
+	public void setComptes(List<AbstractCompte> comptes) {
 		this.comptes = comptes;
 	}
 	
-	public void setComptes(Compte compte) {
+	public void setComptes(AbstractCompte compte) {
 		this.comptes.add(compte);
 	}
 	

@@ -6,7 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 
 @Entity
-public class AssuranceVie extends Compte {
+public class AssuranceVie extends AbstractCompte {
 	
 	
 	@Column(name = "DATE_FIN")

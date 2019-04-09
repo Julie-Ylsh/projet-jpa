@@ -3,7 +3,6 @@ package dev.banque;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,23 +10,11 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-@Table(name = "OPERATIONS")
-@Inheritance(strategy = InheritanceType.JOINED)
-public class Operation {
-
-	public Operation(Double montant, String motif, Compte compte) {
-		super();
-		this.montant = montant;
-		this.motif = motif;
-		this.compte = compte;
-	}
-
-	public Operation() {
-
-	}
+@MappedSuperclass
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class AbstractOperation {
 
 	@Id // obligatoire
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,7 +31,7 @@ public class Operation {
 
 	@ManyToOne
 	@JoinColumn(name = "COMPTE_NOM")
-	private Compte compte;
+	private AbstractCompte compte;
 
 	public Integer getId() {
 		return id;
@@ -78,11 +65,11 @@ public class Operation {
 		this.motif = motif;
 	}
 
-	public Compte getCompte() {
+	public AbstractCompte getCompte() {
 		return compte;
 	}
 
-	public void setCompte(Compte compte) {
+	public void setCompte(AbstractCompte compte) {
 		this.compte = compte;
 	}
 

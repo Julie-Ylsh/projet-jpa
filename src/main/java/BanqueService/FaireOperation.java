@@ -6,8 +6,6 @@ import com.mysql.cj.util.StringUtils;
 
 import DAO.BanqueDAO;
 import dev.banque.Client;
-import dev.banque.Compte;
-import dev.banque.Operation;
 import dev.banque.Virement;
 import utils.NumberUtils;
 
@@ -26,37 +24,35 @@ public class FaireOperation extends BanqueService {
 
 		Client clientConcerne = toto.findAClient(nomClient, prenomClient);
 
-		// Cas où le client possède plusieurs comptes
-		if (clientConcerne.getComptes().size() > 1) {
+		// Cas où le client n'existe pas
+		if (clientConcerne == null)
+			System.out.println("Le client concerné n'existe pas");
+
+		// Cas où le client existe
+		else {
+
 			System.out.println("Voici la liste des comptes associés : ");
-			System.out.println(clientConcerne.getComptes());
+			toto.findComptes(clientConcerne);
 
 			// Boucle pour savoir si c'est bien un numéro
 			System.out.println("Merci de sélectionner un compte par son id");
-			String questionIdSrt = null;
+			String compteIdSrt = null;
 			do {
-				questionIdSrt = question.nextLine();
+				compteIdSrt = question.nextLine();
 
-				if (NumberUtils.isNumber(questionIdSrt) == false) {
+				if (NumberUtils.isNumber(compteIdSrt) == false) {
 					System.out.println("Ceci n'est pas un numéro, doofus");
 				}
 			}
 
-			while (StringUtils.isStrictlyNumeric(questionIdSrt) == false);
+			while (StringUtils.isStrictlyNumeric(compteIdSrt) == false);
 
-			int questionId = Integer.parseInt(questionIdSrt);
-
-			// récupérer le compte à partir de son ID
-			Compte compteConcerne = toto.findCompte(questionId);
+			int compteId = Integer.parseInt(compteIdSrt);
 
 			System.out.println("Pour quelle personne souhaitez-vous faire un virement ? Ecrivez le nom et le prénom");
 			String nomPrenom = question.nextLine();
 
-			// Création du nouveau virement
-			Virement virement = new Virement(nomPrenom);
-			toto.saveNewVirement(virement);
-
-			System.out.println("Quel montant souhaitez-vous virer ?");
+			System.out.println("Quel montant souhaitez-vous virer ? Inscrivez-le sans les euros");
 			// Boucle pour savoir si c'est bien un numéro
 			String montantStr = null;
 			do {
@@ -73,67 +69,12 @@ public class FaireOperation extends BanqueService {
 			System.out.println("Inscrivez un motif pour cette opération");
 			String motif = question.nextLine();
 
-			// Création de l'opération
-			Operation operation = new Operation(montant, motif, compteConcerne);
-			toto.saveNewOperation(operation);
-
-		}
-
-		// Cas où le client possède un compte
-		if (clientConcerne.getComptes().size() == 1) {
-			System.out.println("Voici le compte associé : ");
-			System.out.println(clientConcerne.getComptes());
-
-			// Boucle pour savoir si c'est bien un numéro
-						System.out.println("Merci de sélectionner le compte par son id");
-						String questionIdSrt = null;
-						do {
-							questionIdSrt = question.nextLine();
-
-							if (NumberUtils.isNumber(questionIdSrt) == false) {
-								System.out.println("Ceci n'est pas un numéro, doofus");
-							}
-						}
-
-						while (StringUtils.isStrictlyNumeric(questionIdSrt) == false);
-
-						int questionId = Integer.parseInt(questionIdSrt);
-
-			// récupérer le compte à partir de son ID
-			Compte compteConcerne = toto.findCompte(questionId);
-
-			System.out.println("Pour quelle personne souhaitez-vous faire un virement ? Ecrivez le nom et le prénom");
-			String nomPrenom = question.nextLine();
-
 			// Création du nouveau virement
 			Virement virement = new Virement(nomPrenom);
-			toto.saveNewVirement(virement);
+			toto.saveNewVirement(virement, montant, motif, compteId);
+			
+			System.out.println("Votre virement a bien été effectué");
 
-			System.out.println("Quel montant souhaitez-vous virer ?");
-			// Boucle pour savoir si c'est bien un numéro
-			String montantStr = null;
-			do {
-				montantStr = question.nextLine();
-
-				if (NumberUtils.isNumber(montantStr) == false) {
-					System.out.println("Ceci n'est pas un numéro, doofus");
-				}
-			}
-
-			while (StringUtils.isStrictlyNumeric(montantStr) == false);
-			Double montant = Double.parseDouble(montantStr);
-
-			System.out.println("Inscrivez un motif pour cette opération");
-			String motif = question.nextLine();
-
-			// Création de l'opération
-			Operation operation = new Operation(montant, motif, compteConcerne);
-			toto.saveNewOperation(operation);
-		}
-
-		// Cas où le client ne possède pas de compte
-		if (clientConcerne.getComptes().size() < 1) {
-			System.out.println("Aucun compte n'est associé à ce client.");
 		}
 
 	}

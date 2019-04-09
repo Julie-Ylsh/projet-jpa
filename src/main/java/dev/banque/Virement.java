@@ -3,8 +3,9 @@ package dev.banque;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
+
 @Entity
-public class Virement extends Operation {
+public class Virement extends AbstractOperation {
 
 	public Virement() {
 	}
