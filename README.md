@@ -19,12 +19,12 @@ Création de tables livres, clients, commandes... Et exploitation des ces tables
 Les opérations suivantes ont été rendues possibles :
 ### TP 3
 Le TP 3 demandait les instructions suivantes :
-Créer les entités JPA suivantes et mettez en place les annotations relationnelles :
-o Banque
-o Compte
-o Operation
-o Client
-	▪ Adresse (Embeddable)
+>Créer les entités JPA suivantes et mettez en place les annotations relationnelles :
+>o Banque
+>o Compte
+>o Operation
+>o Client
+	>▪ Adresse (Embeddable)
 
 - Les tables seront générées à partir des relations définies dans votre modèle métier
 - Insérer en base de données des instances des différents objets en utilisant l’EntityManager
