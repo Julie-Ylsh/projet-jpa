@@ -28,10 +28,13 @@ Le TP 3 demandait les instructions suivantes :
 >o Operation
 >
 >o Client
-	>▪ Adresse (Embeddable)
-
-- Les tables seront générées à partir des relations définies dans votre modèle métier
-- Insérer en base de données des instances des différents objets en utilisant l’EntityManager
+>	
+>	▪ Adresse (Embeddable)
+>
+>
+>- Les tables seront générées à partir des relations définies dans votre modèle métier
+>
+>- Insérer en base de données des instances des différents objets en utilisant l’EntityManager
 
 ### TP 4
 Le TP 4 demandait les instructions suivantes :
