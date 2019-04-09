@@ -50,8 +50,8 @@ Le TP 4 demandait les instructions suivantes :
 >- Insérer un compte associé à 2 clients
 >- Insérer un client avec plusieurs comptes :
 >	
-	>▪ 1 compte de type assurance vie
+>	▪ 1 compte de type assurance vie
 >
-	>▪ 1 compte de type livret A
+>	▪ 1 compte de type livret A
 >- Insérer des opérations de type virements sur un compte
 >- Insérer des opérations de type opérations sur un compte
